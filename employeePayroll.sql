@@ -257,3 +257,26 @@ mysql> select * from Employee_Payroll;
 |  3 | Abinash | NULL         | NULL    | NULL       |     80000 |          0 |           0 |   0 |       0 | 2022-02-18 | F      |
 +----+---------+--------------+---------+------------+-----------+------------+-------------+-----+---------+------------+--------+
 3 rows in set (0.00 sec)
+
+
+******************************************* UC 10 *******************************************
+
+INSERT INTO Employee_Payroll (id,name,phone_number,address,department,basic_pay,deductions,taxable_pay,tax,net_pay,StartDate,gender) VALUES
+    -> (4, 'Terissa', 7846821730, 'Amberpet', 'Sales', 45000, 2000, 1500, 5000, 50000, '2022-05-30','F'),
+    -> (5, 'Terissa', 7846821730, 'Amberpet', 'Marketing', 45000, 2000, 1500, 5000, 50000, '2022-05-30','F');
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Employee_Payroll;
++----+---------+--------------+----------+------------+-----------+------------+-------------+------+---------+------------+--------+
+| id | name    | phone_number | address  | department | basic_pay | deductions | taxable_pay | tax  | net_pay | StartDate  | gender |
++----+---------+--------------+----------+------------+-----------+------------+-------------+------+---------+------------+--------+
+|  1 | Hitesh  | NULL         | NULL     | NULL       |     45000 |          0 |           0 |    0 |       0 | 2021-03-31 | M      |
+|  2 | Pratish | NULL         | NULL     | NULL       |     50000 |          0 |           0 |    0 |       0 | 2020-04-11 | M      |
+|  3 | Abinash | NULL         | NULL     | NULL       |     80000 |          0 |           0 |    0 |       0 | 2022-02-18 | F      |
+|  4 | Terissa | 7846821730   | Amberpet | Sales      |     45000 |       2000 |        1500 | 5000 |   50000 | 2022-05-30 | F      |
+|  5 | Terissa | 7846821730   | Amberpet | Marketing  |     45000 |       2000 |        1500 | 5000 |   50000 | 2022-05-30 | F      |
++----+---------+--------------+----------+------------+-----------+------------+-------------+------+---------+------------+--------+
+5 rows in set (0.00 sec)
+
+
