@@ -280,3 +280,22 @@ mysql> SELECT * FROM Employee_Payroll;
 5 rows in set (0.00 sec)
 
 
+******************************************* UC 12 *******************************************
+
+
+mysql> CREATE TABLE departments(
+    -> dept_id INT NOT NULL,
+    -> dept_name varchar(150) NOT NULL,
+    -> emp_id INT NOT NULL,
+    -> PRIMARY KEY(dept_id),
+    -> FOREIGN KEY (emp_id) REFERENCES employee_payroll (id));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> CREATE TABLE payroll(
+    -> payroll_id INT NOT NULL,
+    -> basic_pay double NOT NULL,
+    -> PRIMARY KEY(payroll_id),
+    -> emp_id INT NOT NULL,
+    -> FOREIGN KEY (emp_id) REFERENCES employee_payroll(id));
+Query OK, 0 rows affected (0.03 sec)
+
